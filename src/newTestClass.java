@@ -1,4 +1,4 @@
 
 public class newTestClass {
-//New test class
+//New test class 2
 }
