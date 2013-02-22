@@ -4,4 +4,6 @@ public class newTestClass {
 	
 	
 	// here is a change
+	
+	// a new change
 }
