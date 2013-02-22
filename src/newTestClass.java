@@ -1,6 +1,13 @@
 
 public class newTestClass {
-//New test class 2
+//New test class
 	
-	// whhaaaaaa
+	
+	// here is a change
+	
+<<<<<<< HEAD
+	// a new change
+=======
+	// another change incoming!
+>>>>>>> another change
 }
