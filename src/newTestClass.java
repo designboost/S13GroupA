@@ -10,4 +10,5 @@ public class newTestClass {
 =======
 	// another change incoming!
 >>>>>>> another change
+	// Asbjørn skaber sig
 }
