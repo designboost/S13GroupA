@@ -1,6 +1,6 @@
 
 public class Biblotek {
-	private bogEksemplar[] bogBestand;
+	private BogEksemplar[] bogBestand;
 	private Person[] laanere;
 	private Ansat[] ansatte;
 	private String navn; 
@@ -8,25 +8,17 @@ public class Biblotek {
 	public Biblotek() {
 		// TODO Auto-generated constructor stub
 	}
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	
+	public <bogBestand> void addBog(Bog bogEksemplar) {
+		BogEksemplar b = new BogEksemplar();
 	}
 	
-	public void addBog(bog: bogEksemplar) {
-		
+	public <ansat> void addAnsat(Ansat ansatte) {
+		Ansat a = new Ansat("Biblotekar", "Fisk");
 	}
 	
-	public void addAnsat(ansat: Ansat) {
-		
-	}
-	
-	public void addLaanere(Laaner: Person) {
-		
+	public <laanere> void addLaanere(Person laanere) {
+		laaner l = new Person("Biblotekar", "Fisk");
 	}
 	
 	public void udskrivBogliste() {
@@ -42,8 +34,13 @@ public class Biblotek {
 	}
 	
 	public String toString() {
-		String s = String.format();
-		return s;
+		//String s = String.format("Ansatte: %s", this.udskrivAnsatte() );
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		
+		
 	}
 
 }
