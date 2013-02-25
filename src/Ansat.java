@@ -1,8 +1,4 @@
 /**
- * 
- */
-
-/**
  * @author Asbjørn
  *
  * Filled out according to the UML diagram on 
@@ -13,13 +9,13 @@
 public class Ansat {
 
 	private String stilling;
-	
+
 	private String speciale;
-	
+
 	public String getStilling(){
 		return stilling;
 	}
-	
+
 	public String toString(){
 		return null;
 	}
