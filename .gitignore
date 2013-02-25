@@ -1,7 +1,9 @@
 # java specific
-
-*.class
-bin
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
 
 # generic files to ignore
 *~
@@ -9,3 +11,5 @@ bin
 *.DS_Store
 *.swp
 *.out
+
+
