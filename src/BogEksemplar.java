@@ -3,7 +3,6 @@ public class BogEksemplar extends Bog {
 	
 	public BogEksemplar(String title, Forfatter[] forfattere, Emne emne, int aar, int eksplNr) {
 		super(title, forfattere, emne, aar);
-		
 		this.eksplNr = eksplNr;
 	}
 
@@ -26,6 +25,6 @@ public class BogEksemplar extends Bog {
 		BogEksemplar  be = new BogEksemplar("Noget omkring fisk", f, e, 1, 2);
 		
 		//BogEksemplar b = new BogEksemplar();
-        System.out.println(be);
+		System.out.println(be);
 	}
 }
