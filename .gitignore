@@ -1,4 +1,5 @@
 # java specific
+.classpath
 .project
 .metadata
 bin/**
