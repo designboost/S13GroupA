@@ -8,10 +8,10 @@ public class Ansat extends Person {
 	
 	
 		
-		public Ansat(Person p,String Stiling, String Speciale)
+		public Ansat(Person p,String Stilling, String Speciale)
 		{
 		 super(p.cpr, p.name);
-		 this.Stilling=Stiling;
+		 this.Stilling=Stilling;
 		 this.Speciale=Speciale;
 		 
 		}
