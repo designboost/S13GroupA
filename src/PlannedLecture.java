@@ -29,7 +29,8 @@ public class PlannedLecture {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		PlannedLecture pLec = new PlannedLecture("Svend", "test", 22);
+		System.out.println(pLec);
 	}
 
 }
