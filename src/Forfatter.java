@@ -22,7 +22,7 @@ public class Forfatter {
 	}
 	
 	public String toString(){
-		String s = String.format("Writer: %s, born in: %s, year:%d - deceased: %d" , this.getForfatter(), this.bornWhere, this.born, this.deceased );
+		String s = String.format(" Writer: %s, born in: %s, year:%d - deceased: %d" , this.getForfatter(), this.bornWhere, this.born, this.deceased );
 		return s;
 	}
 	
