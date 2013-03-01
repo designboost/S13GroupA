@@ -1,32 +1,43 @@
-/**
- * @author Asbj¿rn
- *
- * Filled out according to the UML diagram on 
- * http://deformation.org/pbawu/idefix/site/ch04s03.html
- * 
- */
-public class Ansat {
-	private String stilling;
-	private String speciale;
 
-	public Ansat(String stilling, String speciale) {
-		this.stilling = stilling;
-		this.speciale = speciale;
-	}
 
-	public String getStilling(){
-		return stilling;
-	}
-
-	public String toString(){
-		String s = String.format("Stilling: %s", this.getStilling() );
-		return s;
-	}
+public class Ansat extends Person {	
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Ansat a = new Ansat("Biblotekar", "Romaner");
-		System.out.println(a);
-	}
+			private String Stilling;
+		    private String Speciale;
+				    
+	
+	
+		
+		public Ansat(Person p,String Stiling, String Speciale)
+		{
+		 super(p.cpr, p.name);
+		 this.Stilling=Stiling;
+		 this.Speciale=Speciale;
+		 
+		}
+		
+	
+		public String getStilling() {
+			return this.Stilling;
+		}
+		
+		public String getSpeciale()
+		{
+		  return this.Speciale;
+		}
+		
+		
+		@Override
+		public String toString() {
+			String s = this.Stilling + " " + this.Speciale;
+			return s;
+		}
+			public static void main(String[] args) {
+				// TODO Auto-generated method stub
+				Cprno cpr1 = new Cprno(311882945);
+				Person p1 = new Person(cpr1, "Lucas","lector","it");
+				System.out.println(p1.toString());
+				}
 
 }
+	
