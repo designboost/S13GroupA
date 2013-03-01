@@ -1,0 +1,16 @@
+# java specific
+.classpath
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+
+# generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
+

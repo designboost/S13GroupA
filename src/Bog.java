@@ -12,40 +12,38 @@ public class Bog {
 		this.aar = aar;
 	}
 
-	public void addForfatter(forfatter: Forfatter) {
+	public void addForfatter(Forfatter forfattere) {
 		
 	}
 	
-	public String getForfatter() {
-		String s = "Something";  // Put return value here
-		return s;
+	public Forfatter[] getForfatter() {
+		return forfattere;
 	}
 	
 	public String getTitle() {
-		String s = "something"; // Put return value here
-		return s;
+		return title;
 	}
 	
 	public int getAar() {
-		int i = 1; // Put return value here
-		return i;
+		return aar;
 	}
 	
 	public Emne getEmne() {
-		
+		return emne;
 	}
 	
 	public String toString() {
-		String s = String.format("Forfatter: %40s" , this.getForfatter());
+		String s = String.format("Book-title: %s. Forfatter: %s. Genre: %s. From %s" , this.getTitle(), this.getForfatter(), this.getEmne(), this.getAar());
 		return s;
 	}
 	
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Bog b = new Bog("title", "hello", "Krimi", int 4);
+		Forfatter f[] = new Forfatter[1];
+		f[0] = new Forfatter("Dude Dudeson", 1919, 1223, "Humlebæk" );
+		Emne e = new Emne(12, "Love-Story");
+		
+		Bog b = new Bog("Java for Noobs!", f, e, 1922);
 		System.out.println(b);
 	}
 
