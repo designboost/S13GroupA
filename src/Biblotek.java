@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
 public class Biblotek {
-	private String person;
+	private ArrayList<Person> laanere = new ArrayList<Person>();
 	private ArrayList<BogEksemplar> bogBestand = new ArrayList<BogEksemplar>();
 	private ArrayList<Ansat> ansatte = new ArrayList<Ansat>();
 	private String navn; 
 	
-	public Biblotek(String person, BogEksemplar bogBestand, Ansat ansatte, String navn) {
-		this.person = person;
+	public Biblotek(Person laanere, BogEksemplar bogBestand, Ansat ansatte, String navn) {
+		this.laanere.add(laanere);
 		this.bogBestand.add(bogBestand);
 		this.ansatte.add(ansatte);
 		this.navn = navn;
@@ -36,7 +36,6 @@ public class Biblotek {
 		System.out.println(s);
 	}
 	
-	/*
 	public void udskrivLaanere() {
 		int i = 0;
 		String s = "";
@@ -48,7 +47,7 @@ public class Biblotek {
 		
 		System.out.println(s);
 	}
-	*/
+
 	public void udskrivAnsatte() {
 		int i = 0;
 		String s = "";
@@ -62,7 +61,7 @@ public class Biblotek {
 	}
 
 	public String toString() {
-		String s = String.format("Person: %s\n Navn: %s", this.person, this.navn );
+		String s = String.format("Person: %s\n Navn: %s", this.laanere, this.navn );
 		return s;
 	}
 	
