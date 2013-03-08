@@ -1,23 +1,32 @@
+import java.util.ArrayList;
 
 public class Bog {
 	private String title;
-	private Forfatter[] forfattere;
+	private ArrayList<Forfatter> forfattere = new ArrayList<Forfatter>();
 	private Emne emne;
 	private int aar;
 
-	public Bog(String title, Forfatter[] forfattere, Emne emne, int aar) {
+	public Bog(String title, Forfatter forfattere, Emne emne, int aar) {
 		this.title = title;
-		this.forfattere = forfattere;
+		this.forfattere.add(forfattere);
 		this.emne = emne;
 		this.aar = aar;
 	}
 
 	public void addForfatter(Forfatter forfattere) {
-		
+		this.forfattere.add(forfattere);
 	}
 	
-	public Forfatter[] getForfatter() {
-		return forfattere;
+	public String getForfatter() {
+		int i = 0;
+		String s = "";
+		while (this.forfattere.size() > i) {
+			s += this.forfattere.get(i).toString();
+			s += " \n";
+			i++;
+		}
+		
+		return s;
 	}
 	
 	public String getTitle() {
@@ -33,17 +42,18 @@ public class Bog {
 	}
 	
 	public String toString() {
-		String s = String.format("Book-title: %s. Forfatter: %s. Genre: %s. From %s" , this.getTitle(), this.getForfatter(), this.getEmne(), this.getAar());
+		String s = String.format("Book-title: %s \nForfattere:\n%sGenre: %s \nFrom %s" , this.getTitle(), this.getForfatter(), this.getEmne(), this.getAar());
 		return s;
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Forfatter f[] = new Forfatter[1];
-		f[0] = new Forfatter("Dude Dudeson", 1919, 1223, "Humlebæk" );
-		Emne e = new Emne(12, "Love-Story");
+		Forfatter f = new Forfatter("Dude Dudeson", 1919, 1223, "Humleb¾k" );
+		Forfatter f1 = new Forfatter("Karsten", 1919, 1223, "Humleb¾k" );
 		
+		Emne e = new Emne(12, "Love-Story");
 		Bog b = new Bog("Java for Noobs!", f, e, 1922);
+		b.addForfatter(f1);
 		System.out.println(b);
 	}
 
