@@ -16,14 +16,11 @@ public class BogEksemplar extends Bog {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Forfatter f = new Forfatter("Fishy Joe", 1970, 2011, "New York" );
-		Forfatter f1 = new Forfatter("Karl Johansen", 1656, 1714, "Aarhus" );
 
 		Emne e = new Emne(22, "Fisk");
 		BogEksemplar  be = new BogEksemplar("Noget omkring fisk", f, e, 1, 10);
 		
-		//BogEksemplar b = new BogEksemplar();
 		System.out.println(be);
 	}
 }
